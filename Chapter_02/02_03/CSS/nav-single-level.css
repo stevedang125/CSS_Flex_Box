@@ -1,0 +1,29 @@
+/* Styles for Single Level Menu */
+
+@media screen and (min-width: 30em){
+    .single-nav ul {
+        /* default for flex: align to the left, next to each other */
+        display: flex;
+        /* make all the items float to the right */
+        justify-content: flex-end;
+        /* center */
+        /* justify-content: center; */
+        /* When there is no space for the items, 
+        wrap/put them down to another line */
+        flex-wrap: wrap;
+        /* evenly space  */
+        /* justify-content: space-around; */
+        /* take away the space on the right and left side  */
+        /* justify-content: space-between; */
+        
+    }
+
+    /* stretch to fit the space */
+    .single-nav li{
+        /* the justify-content won't work anymore with this line */
+        flex: 1 0 auto;
+        /* prevent text to float to the left */
+        text-align: center;
+    }
+    
+}
