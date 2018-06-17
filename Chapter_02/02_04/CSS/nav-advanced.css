@@ -4,6 +4,7 @@
     display: flex;
     /* Items float to the left */
     justify-content: flex-start;
+    /* Make the items in here fill out all the available space */
     width: 100%;    
 }
 
