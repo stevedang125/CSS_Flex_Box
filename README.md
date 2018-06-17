@@ -103,3 +103,50 @@ HTML
     }
 }
 ```
+
+#### Chapter 3.3: Using Flexbox fix anchor doesn't fill the card
+#### https://github.com/stevedang125/CSS_Flex_Box/blob/anchor-doesnt-fill-the-card/Chapter_03/03_03/CSS/card-styles.css
+
+```
+/*  On mid screen at 640px, 2 columns*/
+@media screen and (min-width: 40em){
+    .cards{
+        /* Default horizontal items */
+        display: flex;
+        /* Divide items evenly, but not filled the whole width*/
+        justify-content: space-between;
+        /* Move items to the next line if there's less space */
+        flex-wrap: wrap;
+        margin-top: -1em;
+    }
+    
+    .card{
+        /* Grow 0, Shrink 1, width 50% with 1em between  */
+        flex: 0 1 calc(50% - .5em);
+        /* Older browser */
+        /* width: calc(50% - 1em); */
+        margin-bottom: 1em;
+
+        /* ================================================== */
+        /* anchor doesn't fill the card, lets fix it */
+        /* Fill the available space */
+        display: flex;
+        /* ================================================== */
+    
+    }
+}
+
+/* On bigger screen (Desktop) 960px or more 3 columns */
+@media screen and (min-width: 60em){
+    .cards{
+        margin-top: inherit;
+    }
+    .card{
+        /* Grow 0, Shrink 1, width 33% with 1em between  */
+        flex: 0 1 calc(33% - 1em);
+        /* Older browser */
+        /* width: calc(33% - 1em); */
+        margin-bottom: 2em;
+    }
+}
+```

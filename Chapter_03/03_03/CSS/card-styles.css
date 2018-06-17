@@ -61,6 +61,13 @@ body {
 		/* Older browser */
 		/* width: calc(50% - 1em); */
 		margin-bottom: 1em;
+
+		/* ================================================== */
+		/* anchor doesn't fill the card, lets fix it */
+		/* Fill the available space */
+		display: flex;
+		/* ================================================== */
+	
 	}
 }
 
