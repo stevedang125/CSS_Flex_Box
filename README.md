@@ -20,7 +20,7 @@ Practice for CSS course in Lynda.com.
 
 #### Chapter 2.3: Using Flexbox to control single level menu layout
 #### https://github.com/stevedang125/CSS_Flex_Box/blob/master/Chapter_02/02_03/CSS/nav-single-level.css
-`
+```
 /* Styles for Single Level Menu */
 
 @media screen and (min-width: 30em){
@@ -50,11 +50,11 @@ Practice for CSS course in Lynda.com.
     }
     
 }
-`
+```
 
 #### Chapter 2.4: Using Flexbox to control advanced menu layout
 #### https://github.com/stevedang125/CSS_Flex_Box/blob/master/Chapter_02/02_03/CSS/nav-single-level.css
-`
+```
 /* Styles for Advanced Menu */
 .advanced-nav li a {
     /* Default display items by horizontal */
@@ -109,4 +109,4 @@ Practice for CSS course in Lynda.com.
         display: flex;
     }
 }
-`
+```
