@@ -46,3 +46,16 @@
 .social-menu li a[href*="youtube.com"]::before { content: '\f167'; }
 
 .social-menu li a[href*="wordpress.com"]::before { content: '\f19a'; }
+
+/* ==================== Flexbox Stuff ============================ */
+
+.social-menu ul{
+    /* Default horizontal items */
+    display: flex;
+    /* Put items to the new line if space shrinks */
+    flex-wrap: wrap;
+    /* Justify items to the right */
+    justify-content: flex-end;
+}
+
+/* ==================== This will be used for the mix menu ======== */
