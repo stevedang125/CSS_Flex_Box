@@ -1,1 +1,23 @@
 /* Styles for mixed menu (drop-down + social) */
+
+/* Get the big div .nav-mixed */
+/* Then grab the multi level nav ul and play with it */
+.nav-mixed .multi-level-nav ul{
+    background: tomato;
+}
+
+/* Same here for Social Menu */
+.nav-mixed .social-menu ul{
+    background: aqua;
+}
+
+/* Get the two nav-bar into one line by flex */
+.nav-mixed {
+    /* Default horizontal items */
+    display: flex;
+    /* Move items to the next line if there are not enough space */
+    flex-wrap: wrap;
+    /* Divide evenly the items, but not filled the total width */
+    justify-content: space-between;
+    background: hsl(0, 0%, 15%);
+}

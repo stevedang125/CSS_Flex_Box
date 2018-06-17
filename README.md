@@ -49,6 +49,21 @@ https://github.com/stevedang125/CSS_Flex_Box.git
     }
     
 }
+====================================================================
+<section class="menu-section"> 
+    <h2 class="menu-heading">Single Level Menu</h2>
+    <nav id="single-nav" class="single-nav menu" role="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav><!-- #single-nav .single-nav -->
+</section><!-- menu-section -->
 ```
 
 #### Chapter 2.4: Using Flexbox to control advanced menu layout
@@ -108,6 +123,60 @@ https://github.com/stevedang125/CSS_Flex_Box.git
         display: flex;
     }
 }
+
+=================================================================
+<section class="menu-section">
+    <h2 class="menu-heading">Advanced Menu</h2>
+    <nav id="advanced-nav" class="advanced-nav menu" role="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <div class="button-text">
+                        Home
+                        <span>is where the heart is</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-cutlery"></i>
+                    </div>
+                    <div class="button-text">
+                        Food
+                        <span>is nourishment for the soul</span>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-file-text"></i>
+                    </div>
+                    <div class="button-text">
+                        Recipes
+                        <span>guide you on your journey</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-paper-plane"></i>
+                    </div>
+                    <div class="button-text">
+                        News
+                        <span>brings new things</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav><!-- #advanced-nav .advanced-nav -->
+</section><!-- .menu-section -->
 ```
 
 #### Chapter 2.5: Using Flexbox to control multilevel menus with dropdowns
@@ -206,4 +275,159 @@ CSS:
     }
 }
 
+============================================================
+<section class="menu-section">
+    <h2 class="menu-heading">Multi-level (Drop-Down) Menu</h2>
+    <nav id="multi-level-nav" class="multi-level-nav menu" role="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="has-children">
+                <a href="#">Food<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Chef for Hire</a></li>
+                    <li><a href="#">Catering</a></li>
+                    <li><a href="#">Restaurant</a></li>
+                </ul>
+            </li>
+            <li class="has-children">
+                <a href="#">Classes<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Class Schedule</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Breakfast Class</a></li>
+                    <li><a href="#">Brunch Class</a></li>
+                    <li><a href="#">Lunch Class</a></li>
+                    <li><a href="#">Dinner Class</a></li>
+                    <li><a href="#">Dessert Class</a></li>
+                    <li><a href="#">Baking Class</a></li>
+                    <li><a href="#">Canning Class</a></li>
+                    <li><a href="#">Shopping Class</a></li>
+                    <li><a href="#">Tools Class</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a>
+                <ul class="sub-menu">
+                    <li><a href="#">The Eat Story</a></li>
+                    <li><a href="#">Meet the Chef</a></li>
+                    <li><a href="#">Meet the Team</a></li>
+                    <li><a href="#">Our Vendors</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav><!-- #multi-level-nav .multi-level-nav -->
+</section><!-- .menu-section -->
+
+```
+#### Chapter 2.6: Using Flexbox to create social media menu
+#### https://github.com/stevedang125/CSS_Flex_Box/blob/social-media-menu/Chapter_02/02_06/CSS/nav-social.css
+```
+/* ==================== Flexbox Stuff ============================ */
+
+.social-menu ul{
+    /* Default horizontal items */
+    display: flex;
+    /* Put items to the new line if space shrinks */
+    flex-wrap: wrap;
+    /* Justify items to the right */
+    justify-content: flex-end;
+}
+
+/* ==================== This will be used for the mix menu ======== */
+
+<section class="menu-section">
+    <h2 class="menu-heading">Social Menu</h2>
+    <nav id="social-menu" class="social-menu menu" role="navigation">
+        <ul>
+            <li><a href="http://twitter.com/mor10"><span class="screen-reader-text">Twitter</span></a></li>
+            <li><a href="http://facebook.com"><span class="screen-reader-text">Facebook</span></a></li>
+            <li><a href="http://linkedin.com"><span class="screen-reader-text">LinkedIn</span></a></li>
+            <li><a href="http://youtube.com"><span class="screen-reader-text">YouTube</span></a></li>
+            <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+        </ul>
+    </nav><!-- .social-menu -->
+</section><!-- .menu-section -->
+```
+#### Chapter 2.7: Using Flexbox to create mixed (social media + dropdowns)
+#### https://github.com/stevedang125/CSS_Flex_Box/blob/social-media-menu/Chapter_02/02_06/CSS/nav-social.css
+```
+/* Styles for mixed menu (drop-down + social) */
+
+/* Get the big div .nav-mixed */
+/* Then grab the multi level nav ul and play with it */
+.nav-mixed .multi-level-nav ul{
+    background: tomato;
+}
+
+/* Same here for Social Menu */
+.nav-mixed .social-menu ul{
+    background: aqua;
+}
+
+/* Get the two nav-bar into one line by flex */
+.nav-mixed {
+    /* Default horizontal items */
+    display: flex;
+    /* Move items to the next line if there are not enough space */
+    flex-wrap: wrap;
+    /* Divide evenly the items, but not filled the total width */
+    justify-content: space-between;
+    background: hsl(0, 0%, 15%);
+}
+============================================================
+<section class="menu-section">
+    <h2 class="menu-heading">Mixed Menus (drop-down &#43; social)</h2>
+    <div class="nav-mixed menu">
+        <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="has-children">
+                    <a href="#">Food<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Chef for Hire</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                    </ul>
+                </li>
+                <li class="has-children">
+                    <a href="#">Classes<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Class Schedule</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Breakfast Class</a></li>
+                        <li><a href="#">Brunch Class</a></li>
+                        <li><a href="#">Lunch Class</a></li>
+                        <li><a href="#">Dinner Class</a></li>
+                        <li><a href="#">Dessert Class</a></li>
+                        <li><a href="#">Baking Class</a></li>
+                        <li><a href="#">Canning Class</a></li>
+                        <li><a href="#">Shopping Class</a></li>
+                        <li><a href="#">Tools Class</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">The Eat Story</a></li>
+                        <li><a href="#">Meet the Chef</a></li>
+                        <li><a href="#">Meet the Team</a></li>
+                        <li><a href="#">Our Vendors</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav><!-- #multi-level-nav .multi-level-nav -->
+
+        <nav id="social-menu" class="social-menu" role="navigation">
+            <ul>
+                <li><a href="http://twitter.com"><span class="screen-reader-text">Twitter</span></a></li>
+                <li><a href="http://facebook.com"><span class="screen-reader-text">Facebook</span></a></li>
+                <li><a href="http://linkedin.com"><span class="screen-reader-text">LinkedIn</span></a></li>
+                <li><a href="http://youtube.com"><span class="screen-reader-text">YouTube</span></a></li>
+                <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+            </ul>
+        </nav><!-- .social-menu -->
+    </div><!-- .mixed-menu -->
+</section><!-- .menu-section -->
 ```
