@@ -53,6 +53,8 @@ body {
 }
 
 .card{
-	/* flex: 0 1 calc(33% - 1em); */
-	width: calc(33% - 1em);
+	/* Grow 0, Shrink 1, width 33% with 1em between  */
+	flex: 0 1 calc(33% - 1em);
+	/* Older browser */
+	/* width: calc(33% - 1em); */
 }
