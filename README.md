@@ -1,7 +1,5 @@
 # CSS_Flex_Box
-Practice for CSS course in Lynda.com.
-
-## Advanced Responsive Layout with CSS Flexbox by Morten Rand-Hendriksen
+## Advanced Responsive Layout with CSS Flexbox
 ### Topics include:
 
 #### 1. Creating Flexbox-powered menus.
@@ -53,7 +51,7 @@ Practice for CSS course in Lynda.com.
 ```
 
 #### Chapter 2.4: Using Flexbox to control advanced menu layout
-#### https://github.com/stevedang125/CSS_Flex_Box/blob/master/Chapter_02/02_03/CSS/nav-single-level.css
+#### https://github.com/stevedang125/CSS_Flex_Box/blob/master/Chapter_02/02_04/CSS/nav-advanced.css
 ```
 /* Styles for Advanced Menu */
 .advanced-nav li a {
