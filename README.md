@@ -108,3 +108,101 @@
     }
 }
 ```
+
+#### Chapter 2.5: Using Flexbox to control multilevel menus with dropdowns
+#### https://github.com/stevedang125/CSS_Flex_Box/blob/master/Chapter_02/02_05/CSS/nav-multi-level.css
+```
+html file:
+Open/Close behavior for drop down menu
+<script type="text/javascript" src="JS/libs/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="JS/menu-toggle.js"></script>
+
+=====================================================================
+
+CSS:
+
+/* Styles for Single Level Menu */
+@media screen and (max-width: 30em){
+    .multi-level-nav ul ul li a {
+        padding-left: 2em;
+    }
+
+    .dropdown-toggle {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 30em){
+    /* Adding more code here */
+    .multi-level-nav ul {
+        /* Default horizontal items */
+        display: flex;
+        /* Put items to the next line if there's not enough space */
+        flex-wrap: wrap;
+        /* Justify the content to the left */
+        /* justify-content: flex-start; */
+        /* Divide evenly but won't fill up the available space  */
+        justify-content: space-between;
+        
+    }   
+
+    .multi-level-nav li {
+        /* Fill up all the available space */
+        flex: 1 0 auto;
+        position: relative;
+    }
+
+    li.has-children > a {
+        padding-right: 0;
+    }
+
+    .multi-level-nav ul ul {
+        display: none;
+        position: absolute;
+        z-index:100;
+    }
+
+    .multi-level-nav ul ul li {
+        /* Flex items since the changed below, 
+        tell them to prevent weird shrink  */
+        flex: 1 1 auto;
+    }
+
+    .multi-level-nav ul .toggled-on {
+        /* Change from block - flex will display the items in the drop down menu,
+        match the same width as its parent, Food or Classes Tabs */
+        /* display: block; */
+        display: flex;
+    }
+
+    .dropdown-toggle {
+        margin: 0;
+        padding: 0 .5em;
+        border: 0;
+        font-family: 'FontAwesome';
+        content: "";
+        text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
+        background-color: transparent;
+    }
+
+    .dropdown-toggle:after {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 42px;
+        color: white;
+        content: "\f107";
+        line-height: 1em;   
+    }
+
+    .dropdown-toggle:hover,
+    .dropdown-toggle:focus {
+        background: hsl(0, 0%, 25%);
+    }
+
+    .dropdown-toggle.toggle-on:after {
+        content: "\f106";
+    }
+}
+
+```

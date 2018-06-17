@@ -10,11 +10,22 @@
 }
 
 @media screen and (min-width: 30em){
+	/* Adding more code here */
 	.multi-level-nav ul {
-
+		/* Default horizontal items */
+		display: flex;
+		/* Put items to the next line if there's not enough space */
+		flex-wrap: wrap;
+		/* Justify the content to the left */
+		/* justify-content: flex-start; */
+		/* Divide evenly but won't fill up the available space  */
+		justify-content: space-between;
+		
 	}	
 
 	.multi-level-nav li {
+		/* Fill up all the available space */
+		flex: 1 0 auto;
 		position: relative;
 	}
 
@@ -29,11 +40,16 @@
 	}
 
 	.multi-level-nav ul ul li {
-        
+		/* Flex items since the changed below, 
+		tell them to prevent weird shrink  */
+		flex: 1 1 auto;
 	}
 
 	.multi-level-nav ul .toggled-on {
-		display: block;
+		/* Change from block - flex will display the items in the drop down menu,
+		match the same width as its parent, Food or Classes Tabs */
+		/* display: block; */
+		display: flex;
 	}
 
 	.dropdown-toggle {
